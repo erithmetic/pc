@@ -5,10 +5,19 @@
   "default_attributes": {
   },
   "override_attributes": {
+    "mysql" : {
+      "server_root_password": "password"
+    },
+    "postgresql": {
+      "password": {
+        "postgres": "password"
+      }
+    }
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[mysql]"
+    "recipe[mysql]",
+    "recipe[postgresql]"
   ],
   "env_run_lists": {
   }
